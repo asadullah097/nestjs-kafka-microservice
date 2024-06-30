@@ -19,15 +19,6 @@
         "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
       }
     },
-    "shared": {
-      "type": "library",
-      "root": "libs/shared",
-      "entryFile": "index",
-      "sourceRoot": "libs/shared/src",
-      "compilerOptions": {
-        "tsConfigPath": "libs/shared/tsconfig.lib.json"
-      }
-    },
     "auth-microservice": {
       "type": "application",
       "root": "apps/auth-microservice",
@@ -35,6 +26,15 @@
       "sourceRoot": "apps/auth-microservice/src",
       "compilerOptions": {
         "tsConfigPath": "apps/auth-microservice/tsconfig.app.json"
+      }
+    },
+    "database": {
+      "type": "library",
+      "root": "libs/database",
+      "entryFile": "index",
+      "sourceRoot": "libs/database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database/tsconfig.lib.json"
       }
     }
   }

@@ -1,7 +1,7 @@
 import { Controller, Get, ValidationPipe } from '@nestjs/common';
 import { AuthMicroserviceService } from './auth-microservice.service';
 import { EventPattern, Payload } from '@nestjs/microservices';
-import { CreateUserDto } from '@app/shared/dto/create.user.dto';
+import { CreateUserDto } from '@app/database/dto/create.user.dto';
 
 @Controller()
 export class AuthMicroserviceController {

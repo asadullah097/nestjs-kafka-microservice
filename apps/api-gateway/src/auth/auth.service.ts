@@ -8,8 +8,6 @@ export class AuthService {
     ) { }
 
     signUp(createUserDto: any) {
-        console.log(createUserDto, "sending to auth microservice");
-
         this.authClient.emit('create_user', JSON.stringify(createUserDto));
     }
 }
