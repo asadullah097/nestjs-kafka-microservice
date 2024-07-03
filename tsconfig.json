@@ -25,5 +25,9 @@
         "libs/database/src/*"
       ]
     }
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
 }

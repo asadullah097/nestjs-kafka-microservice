@@ -3,11 +3,14 @@ import { ClientKafka } from '@nestjs/microservices';
 
 @Injectable()
 export class AuthService {
-    constructor(
-        @Inject('AUTH_KAFKA_SERVICE') private readonly authClient: ClientKafka
-    ) { }
+  constructor(
+    @Inject('AUTH_KAFKA_SERVICE') private readonly authClient: ClientKafka,
+  ) {}
 
-    signUp(createUserDto: any) {
-        this.authClient.emit('create_user', JSON.stringify(createUserDto));
-    }
+  signUp(createUserDto: any) {
+    console.log(createUserDto, 'kafka listing');
+
+    this.authClient.emit('create_user', JSON.stringify(createUserDto));
+    return 'User created successfully';
+  }
 }

@@ -5,7 +5,9 @@ import { CreateUserDto } from '@app/database/dto/create.user.dto';
 
 @Controller()
 export class AuthMicroserviceController {
-  constructor(private readonly authMicroserviceService: AuthMicroserviceService) { }
+  constructor(
+    private readonly authMicroserviceService: AuthMicroserviceService,
+  ) {}
 
   @EventPattern('create_user')
   async handleCreateUser(@Payload(ValidationPipe) data: CreateUserDto) {
